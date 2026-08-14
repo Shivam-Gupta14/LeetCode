@@ -1,9 +1,5 @@
 class Solution {
     public int maximumLengthSubstring(String s) {
-        
-    }
-}class Solution {
-    public int maximumLengthSubstring(String s) {
         int res = 0, l = 0;
         long mask = 0;
         
