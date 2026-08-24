@@ -14,7 +14,7 @@
  * }
  */
 class Solution {
-    public boolean isIdentical(TreeNode node , TreeNode subRoot){
+    private boolean isIdentical(TreeNode node , TreeNode subRoot){
         if(node ==null && subRoot == null){
             return true;
         }
