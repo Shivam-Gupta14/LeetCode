@@ -1,16 +1,15 @@
 class Solution {
     public int missingMultiple(int[] nums, int k) {
-        boolean[] present = new boolean[101];
-
+        Set<Integer> seen = new HashSet<>();
         for (int num : nums) {
-            present[num] = true;
+            seen.add(num);
         }
 
-        for (int multiple = k; ; multiple += k) {
-            if (multiple > 100 || !present[multiple]) {
-                return multiple;
-            }
+        int cur = k;
+        while (seen.contains(cur)) {
+            cur += k;
         }
-        return -1;
+
+        return cur;
     }
 }
